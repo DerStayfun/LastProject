@@ -1,0 +1,27 @@
+{% extends "frame.html" %}
+
+{% block title %}
+    Register Books
+{% endblock title %}
+
+
+{% block content %}
+    <h1>Register a book here</h1>
+
+<form method="post">
+  <div class="form-group">
+    <label for="exampleInputName1">Title</label>
+    <input name="title" type="text" class="form-control" id="exampleInputName1">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputName2">Author</label>
+    <input name="author" type="text" class="form-control" id="exampleInputName2">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputName3">Genre</label>
+    <input name="genre" type="text" class="form-control" id="exampleInputName3">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock content %}

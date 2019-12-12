@@ -1,0 +1,34 @@
+{% extends "frame.html" %}
+
+{% block title %}
+    Accounts
+{% endblock title %}
+
+
+{% block content %}
+    <h1>Accounts Overview</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Edit</th>
+       <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for account in accounts %}
+    <tr>
+      <th scope="row">{{account.id}}</th>
+      <td>{{account.username}}</td>
+      <td>{{account.email}}</td>
+        <td> <a href="/accounts/{{account.id}}/edit">edit</a></td>
+        <td> <a href="/accounts/{{account.id}}/delete">delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
